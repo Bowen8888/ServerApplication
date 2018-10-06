@@ -240,3 +240,24 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+ClientApplication/Library/*
+
+ClientApplication/Temp/*
+ [Ll]ibrary
+ [Tt]emp
+ [Oo]bj
+ [Bb]uild
+ [Bb]uilds
+ sysinfo.txt
+ .hg
+ .git
+ .vs
+ *.csproj
+ *.unityproj
+ *.sln
+ *.suo
+ *.user
+ *.userprefs
+ *.pidb
+ *.booproj
+ *.DS_store
