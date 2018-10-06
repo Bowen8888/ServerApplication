@@ -53,6 +53,7 @@ public class Network : MonoBehaviour
 		Array.Resize(ref asyncBuff, 8192);
 		PlayerSocket.BeginConnect(ServerIP, ServerPort, new AsyncCallback(ConnectCallback), PlayerSocket);
 		IsConnected = true;
+		MenuManager.instance._menu = MenuManager.Menu.Home;
 	}
 
 	void ConnectCallback(IAsyncResult result)
