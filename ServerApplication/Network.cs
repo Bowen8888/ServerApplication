@@ -29,7 +29,20 @@ namespace ServerApplication
             client.NoDelay = false;
             ServerSocket.BeginAcceptTcpClient(OnClientConnect, null);
 
-
+            for(int i=0; i<100; i++)
+            {
+                if(Clients[i].Socket == null)
+                {
+                    Clients[i].Socket = client;
+                    Clients[i].Index = i;
+                    Clients[i].IP = client.Client.RemoteEndPoint.ToString();
+                    Clients[i].Start();
+                    Console.WriteLine("Incoming Connection from " + Clients[i].IP + "|| index: "+ i);
+                    //SendWelcomeMessages
+                    return;
+                    
+                }
+            }
         }
     }
 }
